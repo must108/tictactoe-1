@@ -1,0 +1,125 @@
+
+body {
+    background-color: #333333;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    padding: 0;
+}
+
+section {
+    text-align: center;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 60px;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.left {
+    border-right: 2px solid white;
+}
+
+.middle {
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+}
+
+.right {
+    border-left: 2px solid white;
+}
+
+#container {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+}
+
+#flexer {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom {
+    border-bottom: 4px solid white;
+}
+
+#gamerestart {
+    padding: 7.5px 12.5px;
+    margin-top: 20px;
+    border-radius: 15px;
+    color: white;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    display: inline-block;
+    box-shadow: 0 9px #999;
+    background-color: #7BAFd4;
+    transition: 0.3s;
+}
+
+#gamerestart:hover {
+    background-color: #68a3ce;
+}
+
+#gamerestart:active {
+    background-color: #68a3ce;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#player1 {
+    border: 2px solid #484d50;
+    width: 150px;
+    height: 40px;
+    border-radius: 15px 15px 0 0;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+#player2 {
+    border: 2px solid #484d50;
+    width: 150px;
+    height: 40px;
+    border-radius: 15px 15px 0 0;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+#gamestatus {
+    position: absolute;
+    top: 280px;
+    left: 50.15%;
+    transform: translateX(-50%);
+    font-size: 75px;
+    opacity: 0;
+    z-index: -1;
+    transition: 1s;
+}
+
