@@ -115,26 +115,33 @@ function determineWinner(){
         if(status1[a] === status1[b] && status1[b] === status1[c] && status1[a] !== ""){
             allClicked();
             if(status1[a] === "X"){
-                gamestatus.style.opacity = 1;
-                gamestatus.textContent = "player 1 won!";
-                play1.style.border = "2px solid #7bafd4";
-                play2.style.border = "2px solid #484d50";
-                allCells.style.opacity = 0;
+                setTimeout(function(){
+                    gamestatus.style.opacity = 1;
+                    gamestatus.textContent = "player 1 won!";
+                    play1.style.border = "2px solid #7bafd4";
+                    play2.style.border = "2px solid #484d50";
+                    allCells.style.opacity = 0;
+                }, 600);
             } else if(status1[a] === "O"){
-                gamestatus.style.opacity = 1;
-                gamestatus.textContent = "player 2 won!";
-                play2.style.border = "2px solid #7bafd4";
-                play1.style.border = "2px solid #484d50";
-                allCells.style.opacity = 0;
+                allClicked();
+                setTimeout(function(){
+                    gamestatus.style.opacity = 1;
+                    gamestatus.textContent = "player 2 won!";
+                    play2.style.border = "2px solid #7bafd4";
+                    play1.style.border = "2px solid #484d50";
+                    allCells.style.opacity = 0;
+                }, 600);
             }
             return;
         } 
     }
     if(status1.every(symbol => symbol != "")){
-        allClicked();
-        gamestatus.style.opacity = 1;
-        gamestatus.textContent = "draw!";
-        allCells.style.opacity = 0;
+            allClicked();
+        setTimeout(function(){
+            gamestatus.style.opacity = 1;
+            gamestatus.textContent = "draw!";
+            allCells.style.opacity = 0;
+        }, 600);
     }
 }
 
